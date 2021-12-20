@@ -19,16 +19,21 @@ int main()
 			sum[edge[i]] += i;
 		}
 
-		ll ans = -1; // change here
+		ll ans = 0; // change here
 		for (ll  i = 0; i < n; i++)
 			ans = max(ans, sum[i]);
 
-		for (ll i = 0; i < n; i++)
+		if(!ans) cout << -1 << endl;
+		else
 		{
-			if (ans != sum[i]) continue;
-			cout << i << endl;
-			break;
+			for (ll i = 0; i < n; i++)
+			{
+				if (ans != sum[i]) continue;
+				cout << i << endl;
+				break;
+			}
 		}
+		
 
 	}
 	return 0;
