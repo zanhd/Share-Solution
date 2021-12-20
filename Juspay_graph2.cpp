@@ -34,13 +34,14 @@ int main()
 		unordered_map<ll, vector<ll>> adj;
 		for (ll i = 0; i < n; i++)
 		{
+			if (edge[i] == -1) continue;
 			adj[i].push_back(edge[i]);
 		}
 
 		vector<ll> a(n, -1);
 		bfs(x, adj, a);
 		vector<ll> b(n, -1);
-		bfs(x, adj, b);
+		bfs(y, adj, b);
 
 		ll ans = -1;
 		pair<ll, ll> d = { -1, -1};
@@ -55,7 +56,7 @@ int main()
 			}
 			else
 			{
-				if (a[i] <= d.first && b[i] <= d.second)
+				if (a[i] + b[i] < d.first + d.second)
 				{
 					ans = i;
 					d = {a[i], b[i]};
