@@ -19,7 +19,7 @@ int main()
 			sum[edge[i]] += i;
 		}
 
-		ll ans = 0;
+		ll ans = -1; // change here
 		for (ll  i = 0; i < n; i++)
 			ans = max(ans, sum[i]);
 
