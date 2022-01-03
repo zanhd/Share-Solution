@@ -15,8 +15,6 @@ vector<ll> seive(ll n = 1e7 + 5)
 		if (!IsPrime[i]) continue;
 		for (ll j = i * i; j <= n; j += i)
 		{
-			]
-
 			IsPrime[j] = 0;
 		}
 	}
