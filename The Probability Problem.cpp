@@ -1,5 +1,5 @@
 /*
-	-: THE PROBABILITY PROBLEM :-
+		-: THE PROBABILITY PROBLEM :-
 You are given a grid (n * m), with some free cells, and some 
 blocked cells. you can only step on empty cells, and you can never
 step on blocked cell, you may only go to a cell, which is located 
