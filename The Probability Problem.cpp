@@ -1,3 +1,38 @@
+/*
+	-: THE PROBABILITY PROBLEM :-
+You are given a grid (n * m), with some free cells, and some 
+blocked cells. you can only step on empty cells, and you can never
+step on blocked cell, you may only go to a cell, which is located 
+down or right to current cell.
+
+Currently, you are at top cell of grid (0,00 and you need to go to
+bottom right cell (n - 1,m - 1).
+
+Some cells of the grid are special. These are the cells,which currently empty, but if blocked then no path will exist from cell
+(0,0) to (n - 1, m - 1).
+
+You need to Tell :
+What is the probability that if you pick an empty cell from the grid, then that empty cell is special too.
+
+Since the probabability can be expressed as P / Q where P and Q are mutually co-prime.
+
+you should express this as P*mod_inverse(Q).
+where mod_inverse(Q) is the muliplicative modulo inverse of Q in mod 1,000,000,007.
+
+INPUT :
+input n and m
+and 2D array of char
+if char = # => cell is blocked
+if char = . => cell is empty
+
+OUTPUT :
+required probability
+
+CONSTRAINT :
+1 <= n.m <= 1000
+
+*/
+					
 #include<bits/stdc++.h>
 #define ModMultiply(a,b,N)	((a)%(N) * (b)%(N))%(N);
 #define ll long long int
